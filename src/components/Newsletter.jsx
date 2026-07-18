@@ -23,21 +23,48 @@ export default function Newsletter() {
             <span>{newsletter.verse.ref}</span>
           </div>
 
-          <p className="body-text">{newsletter.excerpt}</p>
-          <p className="body-text">{newsletter.closing}</p>
-
-          <div className="newsletter-closing">
-            <span className="ref">{newsletter.closingRef}</span>
-          </div>
-
-          <div className="newsletter-signature">
-            {newsletter.signoff}
-            <strong>{newsletter.signature}</strong>
-          </div>
+          <p className="newsletter-greeting">{newsletter.greeting}</p>
         </div>
 
+        <article className="newsletter-body">
+          {newsletter.body.map((block, i) => {
+            if (block.type === 'quote') {
+              return (
+                <blockquote className="newsletter-blockquote" key={i}>
+                  <p>{block.text}</p>
+                  <cite>{block.ref}</cite>
+                </blockquote>
+              );
+            }
+            if (block.type === 'link') {
+              return (
+                <p className="newsletter-link-row" key={i}>
+                  <a href={block.href} target="_blank" rel="noopener noreferrer">
+                    {block.text} →
+                  </a>
+                  {block.date && <span className="newsletter-link-date"> {block.date}</span>}
+                </p>
+              );
+            }
+            return <p key={i}>{block.text}</p>;
+          })}
+
+          <blockquote className="newsletter-blockquote newsletter-blockquote-final">
+            <p>{newsletter.closingVerse.text}</p>
+            <cite>{newsletter.closingVerse.ref}</cite>
+          </blockquote>
+
+          <p className="newsletter-signature">
+            {newsletter.signoff}
+            <br />
+            <strong>{newsletter.signature}</strong>
+          </p>
+
+          <p className="newsletter-footnote">{newsletter.footnote}</p>
+        </article>
+
         <p className="give-note">
-          Want the full newsletter each month? Email{' '}
+          Want this newsletter delivered each month? Email{' '}
           <a href={`mailto:${contact.email}`} style={{ color: 'var(--wine-800)', fontWeight: 600 }}>
             {contact.email}
           </a>{' '}

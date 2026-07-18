@@ -1,9 +1,11 @@
 import { newsletter } from '../data';
+import { ShofarIcon } from './icons';
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-media" />
+      <ShofarIcon className="hero-shofar" strokeWidth="0.6" />
       <div className="container">
         <div className="hero-content">
           <span className="eyebrow">Denver, Colorado</span>

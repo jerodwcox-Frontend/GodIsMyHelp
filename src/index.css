@@ -328,6 +328,19 @@ button {
   background-size: 220px 220px;
 }
 
+.hero-shofar {
+  position: absolute;
+  right: clamp(-4rem, 2vw, 2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(46vw, 520px);
+  height: auto;
+  color: var(--gold-400);
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero .container {
   position: relative;
   padding-block: clamp(6rem, 14vh, 9rem) 5rem;
@@ -583,39 +596,102 @@ button {
   font-style: normal;
 }
 
-.newsletter-card p.body-text {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 1.02rem;
-  margin-bottom: 1.25rem;
-}
-
-.newsletter-closing {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.newsletter-closing .ref {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--gold-400);
-  margin-top: 0.5rem;
-}
-
-.newsletter-signature {
-  margin-top: 1.5rem;
+.newsletter-greeting {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.newsletter-signature strong {
+/* ---- Full newsletter article body ---- */
+.newsletter-body {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  background: var(--white);
+  border: 1px solid rgba(42, 14, 22, 0.08);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: var(--shadow-sm);
+}
+
+.newsletter-body p {
+  color: var(--ink-600);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+
+.newsletter-blockquote {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--cream-100);
+  border-left: 3px solid var(--gold-500);
+  border-radius: var(--radius-sm);
+}
+
+.newsletter-blockquote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--wine-900);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-blockquote cite {
   display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold-600);
+}
+
+.newsletter-blockquote-final {
+  border-left-color: var(--wine-800);
+  text-align: center;
+}
+
+.newsletter-blockquote-final p {
+  font-size: 1.2rem;
+}
+
+.newsletter-link-row {
+  margin-top: -0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.newsletter-link-row a {
+  color: var(--wine-800);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.newsletter-link-date {
+  color: var(--ink-400);
+  font-size: 0.9rem;
+}
+
+.newsletter-body .newsletter-signature {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(42, 14, 22, 0.1);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-900);
+}
+
+.newsletter-body .newsletter-signature strong {
   font-style: normal;
   font-family: var(--font-body);
   font-weight: 700;
-  margin-top: 0.25rem;
-  color: var(--gold-400);
+  color: var(--wine-800);
+}
+
+.newsletter-footnote {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-400);
 }
 
 /* ---------------- Give ---------------- */

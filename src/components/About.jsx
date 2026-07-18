@@ -1,11 +1,11 @@
-import { StarOfDavid } from './icons';
+import { ShofarIcon } from './icons';
 
 export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
         <div className="about-media">
-          <StarOfDavid className="mark" strokeWidth="0.8" />
+          <ShofarIcon className="mark" strokeWidth="0.8" />
         </div>
 
         <div className="about-copy">
