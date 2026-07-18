@@ -1,9 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <circle cx="24" cy="24" r="24" fill="#3c141e" />
-  <g fill="none" stroke="#d6b562" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M13 11c-3.2 7.2-2 15.2 3.2 21.4C21.4 38.6 29 42.2 36 41.4" />
-    <path d="M15.2 9c-3.8 8-2.2 17.2 4 24s15.2 8.8 20.6 7.2" />
-    <path d="M36 41.4c2.8 0 4.8-1.4 4.6-3.6-.2-2-2.4-3.2-5-2.8" />
-    <circle cx="12.2" cy="11.6" r="2.2" />
+  <defs>
+    <clipPath id="circleClip"><circle cx="24" cy="24" r="24" /></clipPath>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+  </defs>
+  <g clip-path="url(#circleClip)">
+    <image href="/images/shofar.jpg" x="-10" y="-10" width="68" height="68" preserveAspectRatio="xMidYMid slice" filter="url(#softBlur)" />
+    <rect x="0" y="0" width="48" height="48" fill="#2a0e16" fill-opacity="0.55" />
+  </g>
+  <g fill="none" stroke="#d6b562" stroke-width="3.2" stroke-linejoin="round">
+    <path d="M24 4 L42 36 L6 36 Z" />
+    <path d="M24 44 L6 12 L42 12 Z" />
   </g>
 </svg>

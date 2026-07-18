@@ -1,5 +1,5 @@
 import { nav, contact } from '../data';
-import { ShofarIcon, MailIcon, PhoneIcon, PinIcon } from './icons';
+import { StarOfDavid, MailIcon, PhoneIcon, PinIcon } from './icons';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-brand">
             <a className="brand" href="#home">
               <span className="brand-mark">
-                <ShofarIcon stroke="#d6b562" />
+                <StarOfDavid stroke="#d6b562" />
               </span>
               <span className="brand-text">
                 <span className="name">G-d Is My Help</span>
